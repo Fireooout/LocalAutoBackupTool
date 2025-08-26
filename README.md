@@ -1,9 +1,5 @@
 # 本地文件自动备份助手 (Local File Auto Backup Assistant)
 
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Python](https://img.shields.io/badge/python-3.7%2B-blue.svg)
-![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
-
 ### 1. 软件简介
 本地文件自动备份助手是一款**轻量级桌面应用**，旨在帮助用户轻松实现重要文件和文件夹的自动备份与管理。通过简单的设置，您可以指定需要备份的文件/目录、备份存储位置和自动备份间隔，软件将在后台自动执行备份操作，确保您的数据安全。
 
