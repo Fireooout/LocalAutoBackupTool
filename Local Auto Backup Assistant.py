@@ -145,6 +145,17 @@ LANGUAGES = {
     }
 }
 
+def get_resource_path(relative_path):
+    """获取资源文件的正确路径，适配开发环境和打包环境"""
+    try:
+        # PyInstaller创建的临时文件夹路径
+        base_path = sys._MEIPASS
+    except AttributeError:
+        # 开发环境下的路径
+        base_path = os.path.abspath(".")
+    
+    return os.path.join(base_path, relative_path)
+
 class AutoBackupTool:
     def __init__(self, root):
         self.root = root
@@ -166,8 +177,8 @@ class AutoBackupTool:
         self.tray_icon = None
         self.tray_thread = None  # 用于跟踪托盘图标的线程
         
-        self.normal_icon = "folder-sync.png"
-        self.active_icon = "folder-sync-start.png"
+        self.normal_icon = get_resource_path("folder-sync.png")
+        self.active_icon = get_resource_path("folder-sync-start.png")
         
         self.hotkey = "ctrl+F1"
         
@@ -260,6 +271,7 @@ class AutoBackupTool:
     
     def set_icon(self, active=False):
         try:
+            # 使用处理后的图标路径
             icon_path = self.active_icon if active else self.normal_icon
             
             if os.path.exists(icon_path):
@@ -281,6 +293,7 @@ class AutoBackupTool:
                 # 等待线程结束
                 self.tray_thread.join(timeout=1.0)
             
+            # 使用处理后的图标路径
             icon_path = self.active_icon if active else self.normal_icon
             
             if os.path.exists(icon_path):
