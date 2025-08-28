@@ -1,4 +1,4 @@
-# 本地文件自动备份助手 (Local File Auto Backup Assistant)
+# 本地文件自动备份助手 (LocalAutoBackupTool)
 
 ### 1. 软件简介
 本地文件自动备份助手是一款**轻量级桌面应用**，旨在帮助用户轻松实现重要文件和文件夹，游戏存档等的自动备份与管理。通过简单的设置，您可以指定需要备份的文件/目录、备份存储位置和自动备份间隔，软件将在后台自动执行备份操作，确保您的数据安全。
@@ -68,7 +68,7 @@
 ## 二、English Version
 
 ### 1. Software Introduction
-Local File Auto Backup Assistant is a **lightweight desktop application** designed to help users easily implement automatic backup and management of important files and folders. With simple settings, you can specify the files/folders to be backed up, backup storage location, and automatic backup interval. The software will automatically perform backup operations in the background to ensure your data security.
+Local Auto Backup Tool is a **lightweight desktop application** designed to help users easily implement automatic backup and management of important files and folders. With simple settings, you can specify the files/folders to be backed up, backup storage location, and automatic backup interval. The software will automatically perform backup operations in the background to ensure your data security.
 <img width="1202" height="872" alt="prview2" src="https://github.com/user-attachments/assets/5661002a-0c1b-4ff2-a203-1df2d8a5a871" />
 
 ### 2. Key Features
