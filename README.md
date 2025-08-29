@@ -1,8 +1,8 @@
-# 本地文件自动备份助手 (LocalAutoBackupTool)
+# 本地文件自动备份助手 (Local File Auto Backup Assistant) v1.2.1
 
 ### 1. 软件简介
 本地文件自动备份助手是一款**轻量级桌面应用**，旨在帮助用户轻松实现重要文件和文件夹，游戏存档等的自动备份与管理。通过简单的设置，您可以指定需要备份的文件/目录、备份存储位置和自动备份间隔，软件将在后台自动执行备份操作，确保您的数据安全。
-<img width="1202" height="872" alt="prview" src="https://github.com/user-attachments/assets/fc4c7ad9-6d52-46f8-8ea0-e56029b422de" />
+
 
 ### 2. 主要功能
 - **多源备份支持**：同时备份多个文件和多个目录，满足复杂备份需求
@@ -13,7 +13,15 @@
 - **托盘后台运行**：最小化到系统托盘，不占用桌面空间，后台持续守护数据安全
 - **双语界面切换**：一键切换中文/英文界面，适配不同用户使用习惯
 
-### 3. 使用说明
+### 3. 更新日志
+#### 版本 1.1.0
+- 修复打包过程中单文件版本被清理的问题
+- 更新托盘图标为folder-sync.png和folder-sync-start.png
+- 修复托盘菜单启用自动备份时创建多个图标的问题
+- 优化打包配置，确保图标文件正确打包
+- 其他性能和稳定性改进
+
+### 4. 使用说明
 #### 3.1 基本设置
 ##### 3.1.1 添加源路径
 - 点击「添加文件」按钮：选择单个或多个需要备份的文件
@@ -32,6 +40,19 @@
 - **快捷键设置**：
   1. 在输入框中按格式输入快捷键（如`ctrl+F1`）
   2. 勾选「启用快捷键」选项，激活全局快捷键功能
+
+##### 3.1.4 高级设置（1.2.1优化）
+在「高级设置」标签页中，可配置更多备份选项：
+- **备份前缀设置**：自定义备份文件的前缀命名规则
+- **后缀类型选择**：可选择时间戳、序号或自定义后缀
+  - 时间戳：使用日期时间作为后缀（默认方式）
+  - 序号：使用递增序号作为后缀
+  - 自定义：支持用户自定义后缀格式，可包含日期时间格式
+- **重名文件处理**：设置遇到重名备份文件时的处理方式
+  - 覆盖：直接覆盖同名备份文件
+  - 重命名：自动为重名文件添加序号后缀
+  - 跳过：保留原有备份，跳过当前备份
+- **备份计数器管理**：查看和重置备份序号计数器
 
 #### 3.2 开始备份
 - **自动备份**：点击「开始自动备份」按钮，按钮将切换为「停止自动备份」，软件进入后台自动备份模式
@@ -55,21 +76,22 @@
   3. 选择「启用自动备份」：切换自动备份状态
   4. 选择「退出」：完全关闭程序
 
-### 4. 注意事项
+### 5. 注意事项
 1. **路径限制**：源路径（需备份的文件/目录）与备份路径不能相同，也不能存在包含关系（如源路径为`D:\Data`，备份路径不能为`D:\Data\Backup`）
 2. **存储检查**：确保备份目录所在磁盘有足够的存储空间，避免因空间不足导致备份失败
 3. **数据安全**：执行「还原选中」操作前，建议确认原始文件状态，避免误操作覆盖重要数据
 4. **快捷键冲突**：若设置的快捷键无法使用，可能与其他程序快捷键冲突，建议更换组合（如`ctrl+alt+S`）
+5. **配置文件**：程序会自动创建配置文件"backup_config.ini"保存设置，请勿随意删除或修改
+6. **日志文件**：程序运行时会生成日志文件"backup_tool.log"记录操作和错误信息，便于问题排查
 
-### 5. 反馈与支持
+### 6. 反馈与支持
 如有任何问题或建议，请在项目页面提交 issue，开发者将尽快回复处理。
 
 
 ## 二、English Version
 
 ### 1. Software Introduction
-Local Auto Backup Tool is a **lightweight desktop application** designed to help users easily implement automatic backup and management of important files and folders. With simple settings, you can specify the files/folders to be backed up, backup storage location, and automatic backup interval. The software will automatically perform backup operations in the background to ensure your data security.
-<img width="1202" height="872" alt="prview2" src="https://github.com/user-attachments/assets/5661002a-0c1b-4ff2-a203-1df2d8a5a871" />
+Local File Auto Backup Assistant is a **lightweight desktop application** designed to help users easily implement automatic backup and management of important files and folders. With simple settings, you can specify the files/folders to be backed up, backup storage location, and automatic backup interval. The software will automatically perform backup operations in the background to ensure your data security.
 
 ### 2. Key Features
 - **Multi-source Backup Support**: Backup multiple files and directories simultaneously to meet complex backup needs
@@ -80,7 +102,15 @@ Local Auto Backup Tool is a **lightweight desktop application** designed to help
 - **Tray Background Operation**: Minimize to the system tray without occupying desktop space, and continuously protect data security in the background
 - **Bilingual Interface Switch**: One-click switch between Chinese/English interface to adapt to different user habits
 
-### 3. User Guide
+### 3. Update Log
+#### Version 1.1.0
+- Fixed issue where single-file version was being cleaned up during packaging
+- Updated tray icons to folder-sync.png and folder-sync-start.png
+- Fixed issue where multiple tray icons were created when enabling auto-backup from tray menu
+- Optimized packaging configuration to ensure icon files are correctly packaged
+- Other performance and stability improvements
+
+### 4. User Guide
 #### 3.1 Basic Settings
 ##### 3.1.1 Add Source Paths
 - Click the **Add File** button: Select single or multiple files to be backed up
@@ -99,6 +129,19 @@ Local Auto Backup Tool is a **lightweight desktop application** designed to help
 - **Hotkey Settings**:
   1. Enter the hotkey in the input box according to the format (e.g., `ctrl+F1`)
   2. Check the **Enable Hotkey** option to activate the global hotkey function
+
+##### 3.1.4 Advanced Settings (Enhanced in v1.2.1)
+In the "Advanced Settings" tab, you can configure more backup options:
+- **Backup Prefix Settings**: Customize the prefix naming rule for backup files
+- **Suffix Type Selection**: Choose from timestamp, sequential number, or custom suffix
+  - Timestamp: Use date and time as suffix (default method)
+  - Sequential Number: Use incremental sequential number as suffix
+  - Custom: Support user-defined suffix format, which can include date and time format
+- **Duplicate File Handling**: Set the handling method when encountering duplicate backup files
+  - Overwrite: Directly overwrite the backup file with the same name
+  - Rename: Automatically add a sequential number suffix to duplicate files
+  - Skip: Keep the existing backup and skip the current backup
+- **Backup Counter Management**: View and reset the backup sequential number counter
 
 #### 3.2 Start Backup
 - **Auto Backup**: Click the **Start Auto Backup** button, which will switch to **Stop Auto Backup**, and the software enters the background automatic backup mode
@@ -122,11 +165,26 @@ In the **Backup Management** tab, you can operate on all backup records:
   3. Select **Enable Auto Backup**: Switch the auto backup status
   4. Select **Exit**: Close the program completely
 
-### 4. Notes
+### 7. Notes
 1. **Path Restrictions**: The source path (files/directories to be backed up) and backup path cannot be the same or have an inclusion relationship (e.g., if the source path is `D:\Data`, the backup path cannot be `D:\Data\Backup`)
 2. **Storage Check**: Ensure that the disk where the backup directory is located has sufficient storage space to avoid backup failure due to insufficient space
 3. **Data Security**: Before performing the **Restore Selected** operation, it is recommended to confirm the status of the original file to avoid overwriting important data by mistake
 4. **Hotkey Conflict**: If the set hotkey cannot be used, it may conflict with other program hotkeys. It is recommended to change the combination (e.g., `ctrl+alt+S`)
+5. **Configuration File**: The program will automatically create a configuration file "backup_config.ini" to save settings, please do not delete or modify
+6. **Log File**: The program will generate a log file "backup_tool.log" during operation to record operations and error information, which is convenient for troubleshooting
 
-### 5. Feedback & Support
-For any questions or suggestions, please submit an issue on the project page, and the developer will reply and handle it as soon as possible.
+- Interface Simplification: Removed theme-related settings
+- Comprehensive Performance Optimization: Improved backup algorithms, optimized operation flow, enhanced error handling and thread management
+
+#### Version 1.2.0
+- Interface beautification: Adopted Windows 11 style design, optimized overall visual experience
+- Added duplicate backup file handling function, providing three handling methods
+- Added custom backup file prefix function
+- Extended backup file suffix customization methods, added sequential number suffix and custom suffix options
+- Comprehensive optimization of performance, user experience and operation logic
+- Enhanced error handling and thread management
+- Improved configuration management function, supporting more configuration items
+- Added custom theme color function
+
+### 6. Feedback & Support
+For any questions or suggestions, please submit an issue on the project page, and the developer will reply and handle it as soon as possible。
