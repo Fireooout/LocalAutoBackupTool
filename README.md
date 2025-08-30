@@ -60,29 +60,67 @@ Local Auto Backup Assistant 是一款功能强大的本地自动备份工具，�
 - 修复了高DPI设置下界面显示异常的问题
 - 修复了备份还原过程中路径处理的问题
 
-### 版本 1.1.3
+---
 
-#### 新增功能
-- 添加了自定义前缀和后缀设置功能
-- 添加了备份计数器显示
-- 添加了系统托盘图标支持
-- 添加了备份快捷键功能
+# Local Auto Backup Assistant
 
-#### 功能改进
-- 优化了备份文件命名规则
-- 改进了备份管理界面
-- 优化了配置文件保存和加载机制
+## Software Introduction
 
-#### 问题修复
-- 修复了备份过程中可能出现的文件锁定问题
-- 修复了备份列表显示不完整的问题
+Local Auto Backup Assistant is a powerful local automatic backup tool designed to help users easily manage and protect important data. The software provides an intuitive graphical user interface, supports multiple backup methods and flexible configuration options to meet the backup needs of different users.
 
-### 版本 1.1.0
+### Main Features
 
-#### 新增功能
-- 首次发布版本
-- 实现基本的自动备份功能
-- 支持文件和文件夹备份
-- 提供简单的备份管理功能
-- 支持时间间隔设置
-- 支持最大备份数量设置
+- **Automatic Backup**: Supports automatic backup of files and folders at set time intervals
+- **Manual Backup**: Provides one-click manual backup function for instant backup at any time
+- **Multi-source Path Support**: Can add multiple files and folders as backup sources simultaneously
+- **Flexible Backup Naming**: Supports three naming methods: timestamp, number, and custom suffix
+- **Backup Management**: Provides backup list viewing, deletion, restoration, and renaming functions
+- **Advanced Settings**: Supports setting backup time intervals, maximum backup count, hotkeys, etc.
+- **Auto Numbering Mode**: Supports both automatic and manual numbering modes to ensure orderly management of backup files
+- **Duplicate File Handling**: Provides three handling methods: overwrite, rename, and skip
+- **Multi-language Support**: Supports switching between Chinese and English interfaces
+- **System Tray Support**: Minimizes to system tray without taking up taskbar space
+
+### System Requirements
+
+- Windows Operating System
+- Python 3.6 or higher
+- Required Python libraries: tkinter, os, sys, shutil, threading, datetime, logging, re, keyboard, pystray, PIL
+
+### Usage Instructions
+
+1. After running the program, add files or folders to be backed up in the "Backup Settings" tab
+2. Set the backup destination directory
+3. Configure backup options in the "Advanced Settings" tab, such as time interval, maximum backup count, etc.
+4. Click the "Start Backup" button to start automatic backup, or use hotkeys for manual backup
+5. In the "Backup Management" tab, you can view, delete, restore, or rename existing backups
+
+## Change Log
+
+### Version 1.2.0
+
+#### New Features
+- Added backup numbering mode settings, supporting both automatic and manual numbering modes
+- Added set start number function, allowing users to customize the starting value of backup numbers
+- Improved backup number reassignment mechanism to ensure numbering consistency
+- Added independent settings for backup hotkey and restore hotkey
+- Optimized backup list display, showing latest backups sorted by time
+- Improved backup restoration function, supporting quick restoration via hotkeys
+- Added multi-language support, allowing switching between Chinese and English interfaces
+- Optimized DPI scaling support, improving display on high-resolution monitors
+
+#### Feature Improvements
+- Optimized backup suffix generation logic, supporting timestamp, number, and custom suffix methods
+- Improved backup cleanup mechanism, cleaning old backups based on the maximum number per item
+- Optimized identification and recording methods for backup files/folders
+- Improved backup renaming function, providing a more user-friendly interface
+- Optimized error handling and logging during the backup process
+- Improved backup folder structure, creating independent folders for each backup
+
+#### Bug Fixes
+- Fixed the issue of non-consecutive backup numbers
+- Fixed the issue of program unresponsiveness after backup failure in some cases
+- Fixed the issue of untimely backup list refresh
+- Fixed the issue of abnormal interface display under high DPI settings
+- Fixed the issue of path handling during the backup restoration process
+
