@@ -1,16 +1,8 @@
-# Local Auto Backup Assistant
+# Local Auto Backup Tool  本地自动备份小工具
 
 ## 软件简介
 
-Local Auto Backup Assistant 是一款功能强大的本地自动备份工具，旨在帮助用户轻松管理和保护重要数据。该软件提供了直观的图形用户界面，支持多种备份方式和灵活的配置选项，满足不同用户的备份需求。
-
-
-<img width="301" height="248" alt="image" src="https://github.com/user-attachments/assets/feb0bc6a-5295-49d1-8943-880aab3952ce" />
-
-<img width="301" height="248" alt="image" src="https://github.com/user-attachments/assets/63b5628b-ae47-49a4-bff0-d3c725fbc6a2" />
-
-<img width="301" height="248" alt="image" src="https://github.com/user-attachments/assets/1b307ca8-b611-4edc-afc5-4d09a9fed320" />
-
+本地自动备份小工具(LABT)是一款功能强大的本地自动备份工具，旨在帮助用户轻松管理和保护重要数据。该软件提供了直观的图形用户界面，支持多种备份方式和灵活的配置选项，满足不同用户的备份需求。
 
 ### 主要功能
 
@@ -24,6 +16,9 @@ Local Auto Backup Assistant 是一款功能强大的本地自动备份工具，�
 - **重复文件处理**：提供覆盖、重命名和跳过三种处理方式
 - **多语言支持**：支持中英文界面切换
 - **系统托盘支持**：最小化到系统托盘，不占用任务栏空间
+- **跳过隐藏文件**：可选择跳过隐藏文件和文件夹，提高备份灵活性
+- **设置导入导出**：支持备份和恢复所有配置参数，便于配置迁移
+- **增强托盘交互**：支持左键单击和双击显示窗口，提供更便捷的操作
 
 ### 系统要求
 
@@ -40,6 +35,35 @@ Local Auto Backup Assistant 是一款功能强大的本地自动备份工具，�
 5. 在"备份管理"标签页中可以查看、删除、还原或重命名已有备份
 
 ## 更新日志
+
+### 版本 1.3.0
+
+#### 新增功能
+- 增强了系统托盘图标功能，支持pystray和win32gui两种实现方式
+- 添加了跳过隐藏文件/文件夹选项，提高备份灵活性
+- 新增设置导入导出功能，支持备份和恢复所有配置参数
+- 改进了托盘图标交互，支持左键单击显示窗口和双击显示窗口
+- 优化了托盘图标菜单，提供更便捷的操作选项
+- 添加了配置合并功能，导入设置时保留未导入的配置项
+- 增强了窗口恢复机制，使用Windows API确保窗口正确显示
+- 改进了托盘图标错误处理，提供更稳定的运行体验
+
+#### 功能改进
+- 优化了托盘图标创建和更新机制，提高图标显示稳定性
+- 改进了备份配置文件格式，支持更多配置参数
+- 优化了设置界面布局，提供更直观的用户体验
+- 增强了错误处理和日志记录，便于问题诊断
+- 改进了多语言支持，完善了界面文本翻译
+- 优化了备份过程中的文件属性处理
+- 改进了备份编号管理，提供更灵活的编号选项
+
+#### 问题修复
+- 修复了单击托盘图标无法显示窗口的问题
+- 修复了某些情况下托盘图标无法正确创建的问题
+- 修复了高DPI设置下界面元素显示异常的问题
+- 修复了备份过程中文件属性处理的问题
+- 修复了配置文件读取和写入的兼容性问题
+- 修复了某些情况下窗口无法正确恢复的问题
 
 ### 版本 1.2.0
 
@@ -70,11 +94,11 @@ Local Auto Backup Assistant 是一款功能强大的本地自动备份工具，�
 
 ---
 
-# Local Auto Backup Assistant
+# Local Auto Backup Tool
 
 ## Software Introduction
 
-Local Auto Backup Assistant is a powerful local automatic backup tool designed to help users easily manage and protect important data. The software provides an intuitive graphical user interface, supports multiple backup methods and flexible configuration options to meet the backup needs of different users.
+Local Auto Backup Tool is a powerful local automatic backup tool designed to help users easily manage and protect important data. The software provides an intuitive graphical user interface, supports multiple backup methods and flexible configuration options to meet the backup needs of different users.
 
 ### Main Features
 
@@ -88,6 +112,9 @@ Local Auto Backup Assistant is a powerful local automatic backup tool designed t
 - **Duplicate File Handling**: Provides three handling methods: overwrite, rename, and skip
 - **Multi-language Support**: Supports switching between Chinese and English interfaces
 - **System Tray Support**: Minimizes to system tray without taking up taskbar space
+- **Skip Hidden Files**: Option to skip hidden files and folders, increasing backup flexibility
+- **Settings Import/Export**: Supports backup and restoration of all configuration parameters, facilitating configuration migration
+- **Enhanced Tray Interaction**: Supports left-click and double-click to show window, providing more convenient operation
 
 ### System Requirements
 
@@ -104,6 +131,35 @@ Local Auto Backup Assistant is a powerful local automatic backup tool designed t
 5. In the "Backup Management" tab, you can view, delete, restore, or rename existing backups
 
 ## Change Log
+
+### Version 1.3.0
+
+#### New Features
+- Enhanced system tray icon functionality, supporting both pystray and win32gui implementations
+- Added option to skip hidden files/folders, increasing backup flexibility
+- Added settings import/export functionality, supporting backup and restoration of all configuration parameters
+- Improved tray icon interaction, supporting left-click to show window and double-click to show window
+- Optimized tray icon menu, providing more convenient operation options
+- Added configuration merging functionality, preserving unimported configuration items when importing settings
+- Enhanced window restoration mechanism, using Windows API to ensure proper window display
+- Improved tray icon error handling, providing a more stable operating experience
+
+#### Feature Improvements
+- Optimized tray icon creation and update mechanism, improving icon display stability
+- Improved backup configuration file format, supporting more configuration parameters
+- Optimized settings interface layout, providing a more intuitive user experience
+- Enhanced error handling and logging, facilitating problem diagnosis
+- Improved multi-language support, completing interface text translation
+- Optimized file attribute handling during backup process
+- Improved backup number management, providing more flexible numbering options
+
+#### Bug Fixes
+- Fixed the issue where clicking the tray icon could not display the window
+- Fixed the issue where the tray icon could not be created correctly in some cases
+- Fixed the issue of abnormal interface element display under high DPI settings
+- Fixed file attribute handling issues during backup process
+- Fixed compatibility issues with configuration file reading and writing
+- Fixed the issue where the window could not be restored correctly in some cases
 
 ### Version 1.2.0
 
