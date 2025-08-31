@@ -526,7 +526,8 @@ class AutoBackupTool:
                     import ctypes
                     import win32gui
                     import win32con
-                    from win32gui import GetSystemMetrics
+                    import win32api
+                    from win32api import GetSystemMetrics
                     hwnd = self.root.winfo_id()
                     if hwnd:
                         app_id = "Local.Auto.Backup.Assistant"
@@ -2500,7 +2501,7 @@ def main():
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(app_id)
         logging.info(f"设置应用程序ID成功: {app_id}")
         ctypes.windll.shcore.SetProcessDpiAwareness(1)
-        ctypes.windll.ole32.CoInitializeEx(None, 0)
+        logging.info("COM库初始化已临时禁用，用于测试文件对话框卡死问题")
     except Exception as e:
         logging.warning(f"初始化Windows环境失败: {e}")
     root = tk.Tk()
