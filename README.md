@@ -4,6 +4,14 @@
 
 Local Auto Backup Assistant 是一款功能强大的本地自动备份工具，旨在帮助用户轻松管理和保护重要数据。该软件提供了直观的图形用户界面，支持多种备份方式和灵活的配置选项，满足不同用户的备份需求。
 
+
+<img width="301" height="248" alt="image" src="https://github.com/user-attachments/assets/feb0bc6a-5295-49d1-8943-880aab3952ce" />
+
+<img width="301" height="248" alt="image" src="https://github.com/user-attachments/assets/63b5628b-ae47-49a4-bff0-d3c725fbc6a2" />
+
+<img width="301" height="248" alt="image" src="https://github.com/user-attachments/assets/1b307ca8-b611-4edc-afc5-4d09a9fed320" />
+
+
 ### 主要功能
 
 - **自动备份**：支持按设定的时间间隔自动备份文件和文件夹
