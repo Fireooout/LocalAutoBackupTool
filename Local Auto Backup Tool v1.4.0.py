@@ -340,7 +340,7 @@ class AutoBackupTool:
         self.skip_hidden = False
         self.skip_hidden_var = tk.BooleanVar(value=False)
         self.normal_icon = get_resource_path("folder-sync.ico")
-        self.active_icon = get_resource_path("folder-sync.ico")  
+        self.active_icon = get_resource_path("folder-sync-start.ico")  
         self.load_config()
         self.removed_paths = []
         for source_path in self.source_paths[:]:  
