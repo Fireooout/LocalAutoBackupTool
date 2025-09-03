@@ -2,7 +2,7 @@
 
 ## 软件简介
 
-本地自动备份小工具(LABT)是一款功能强大的本地自动备份工具，旨在帮助用户轻松管理和保护重要数据。该软件提供了直观的图形用户界面，支持多种备份方式和灵活的配置选项，满足不同用户的备份需求。
+本地自动备份小工具(LABT) 是一款功能强大的本地自动备份工具，旨在帮助用户轻松管理和保护重要数据。该软件提供了直观的图形用户界面，支持多种备份方式和灵活的配置选项，满足不同用户的备份需求。
 
 ### 主要功能
 
@@ -14,11 +14,12 @@
 - **高级设置**：支持设置备份时间间隔、最大备份数量、快捷键等
 - **自动编号模式**：支持自动和手动两种编号模式，确保备份文件有序管理
 - **重复文件处理**：提供覆盖、重命名和跳过三种处理方式
-- **多语言支持**：支持中英文界面切换
+- **完善的多语言支持**：支持中英文界面切换，所有UI元素完全依赖语言配置
 - **系统托盘支持**：最小化到系统托盘，不占用任务栏空间
 - **跳过隐藏文件**：可选择跳过隐藏文件和文件夹，提高备份灵活性
 - **设置导入导出**：支持备份和恢复所有配置参数，便于配置迁移
 - **增强托盘交互**：支持左键单击和双击显示窗口，提供更便捷的操作
+- **优化的界面文本更新机制**：确保所有界面文本随语言切换而正确更新
 
 ### 系统要求
 
@@ -35,13 +36,28 @@
 5. 在"备份管理"标签页中可以查看、删除、还原或重命名已有备份
 
 ## 更新日志
-### 版本 1.4.0
+
+### 版本 1.5.0
 
 #### 新增功能
-- 新增永久保留选项
+- 完善了中英文翻译系统，修复了语言切换按钮和序号模式设置的翻译问题
+- 增强了语言配置，添加了'chinese'和'english'翻译项，支持语言切换按钮文本的翻译
+- 改进了界面文本更新机制，确保所有UI元素完全依赖语言配置
+- 优化了多语言切换体验，提高了界面文本的一致性和完整性
 
+#### 功能改进
+- 修复了语言切换按钮的硬编码文本问题，改为使用语言配置获取翻译文本
+- 改进了序号模式设置文本的条件判断逻辑，直接使用语言配置获取翻译文本
+- 优化了界面元素的文本设置方法，提高了多语言支持的稳定性
+- 增强了语言配置的完整性，确保所有界面文本都有对应的中英文翻译
 
-### 版本 1.3.0
+#### 问题修复
+- 修复了语言切换按钮创建代码中的语法错误
+- 修复了序号模式标签、自动编号/手动编号单选按钮的条件判断文本设置问题
+- 解决了部分UI元素文本不随语言切换而变化的问题
+- 修复了中英文翻译不完整的问题
+
+### 版本 1.4.0
 
 #### 新增功能
 - 增强了系统托盘图标功能，支持pystray和win32gui两种实现方式
@@ -115,11 +131,12 @@ Local Auto Backup Tool is a powerful local automatic backup tool designed to hel
 - **Advanced Settings**: Supports setting backup time intervals, maximum backup count, hotkeys, etc.
 - **Auto Numbering Mode**: Supports both automatic and manual numbering modes to ensure orderly management of backup files
 - **Duplicate File Handling**: Provides three handling methods: overwrite, rename, and skip
-- **Multi-language Support**: Supports switching between Chinese and English interfaces
+- **Enhanced Multi-language Support**: Supports switching between Chinese and English interfaces, all UI elements completely rely on language configuration
 - **System Tray Support**: Minimizes to system tray without taking up taskbar space
 - **Skip Hidden Files**: Option to skip hidden files and folders, increasing backup flexibility
 - **Settings Import/Export**: Supports backup and restoration of all configuration parameters, facilitating configuration migration
 - **Enhanced Tray Interaction**: Supports left-click and double-click to show window, providing more convenient operation
+- **Optimized Interface Text Update Mechanism**: Ensures all interface texts update correctly with language switching
 
 ### System Requirements
 
@@ -137,12 +154,27 @@ Local Auto Backup Tool is a powerful local automatic backup tool designed to hel
 
 ## Change Log
 
-### Version 1.4.0
+### Version 1.5.0
 
 #### New Features
-- Added permanent retention option
+- Enhanced Chinese-English translation system, fixing translation issues for language switching buttons and numbering mode settings
+- Improved language configuration, adding 'chinese' and 'english' translation items to support translation of language switching button text
+- Enhanced interface text update mechanism, ensuring all UI elements completely rely on language configuration
+- Optimized multi-language switching experience, improving consistency and completeness of interface text
 
-### Version 1.3.0
+#### Feature Improvements
+- Fixed hardcoded text issues in language switching buttons, now using language configuration to get translated text
+- Improved conditional judgment logic for numbering mode setting text, directly using language configuration to get translated text
+- Optimized text setting methods for interface elements, improving stability of multi-language support
+- Enhanced completeness of language configuration, ensuring all interface texts have corresponding Chinese and English translations
+
+#### Bug Fixes
+- Fixed syntax errors in language switching button creation code
+- Fixed conditional judgment text setting issues for numbering mode labels, auto-numbering/manual numbering radio buttons
+- Resolved issues where some UI element texts did not change with language switching
+- Fixed incomplete Chinese-English translation issues
+
+### Version 1.4.0
 
 #### New Features
 - Enhanced system tray icon functionality, supporting both pystray and win32gui implementations
