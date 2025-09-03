@@ -2231,7 +2231,7 @@ class AutoBackupTool:
         self.source_frame.rowconfigure(0, weight=1)
         
 
-        self.source_listbox = tk.Listbox(self.source_frame, width=50, height=8, selectmode=tk.MULTIPLE)                  
+        self.source_listbox = tk.Listbox(self.source_frame, width=50, height=8, selectmode=tk.EXTENDED)                  
         self.source_listbox.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
         
 
