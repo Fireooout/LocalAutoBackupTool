@@ -230,7 +230,7 @@ LANGUAGES = {
 
         'error_set_start_number': '设置起始序号时出错: {error}',
 
-        'skip_hidden': '跳过隐藏文件/文件夹',
+        'skip_hidden': '备份时跳过隐藏文件/文件夹',
 
         'save_settings': '保存并应用设置',
 
@@ -308,7 +308,217 @@ LANGUAGES = {
 
         'error_load_config': '加载配置文件失败: {error}',
 
-        'error_save_config': '保存配置文件失败: {error}'
+        'error_save_config': '保存配置文件失败: {error}',
+
+        'error_no_backup_dir': '备份目录不存在: {path}',
+
+        'error_create_backup_dir': '创建备份目录失败: {error}',
+
+        'error_copy_file': '复制文件失败: {error}',
+
+        'error_copy_dir': '复制目录失败: {error}',
+
+        'error_read_file': '读取文件失败: {error}',
+
+        'error_write_file': '写入文件失败: {error}',
+
+        'error_create_dir': '创建目录失败: {error}',
+
+        'error_delete_file': '删除文件失败: {error}',
+
+        'error_delete_dir': '删除目录失败: {error}',
+
+        'error_rename_file': '重命名文件失败: {error}',
+
+        'error_rename_dir': '重命名目录失败: {error}',
+
+        'error_move_file': '移动文件失败: {error}',
+
+        'error_move_dir': '移动目录失败: {error}',
+
+        'error_list_dir': '列出目录内容失败: {error}',
+
+        'error_get_file_info': '获取文件信息失败: {error}',
+
+        'error_set_file_info': '设置文件信息失败: {error}',
+
+        'error_get_file_attr': '获取文件属性失败: {error}',
+
+        'error_set_file_attr': '设置文件属性失败: {error}',
+
+        'error_get_file_time': '获取文件时间失败: {error}',
+
+        'error_set_file_time': '设置文件时间失败: {error}',
+
+        'error_get_file_size': '获取文件大小失败: {error}',
+
+        'error_get_file_perm': '获取文件权限失败: {error}',
+
+        'error_set_file_perm': '设置文件权限失败: {error}',
+
+        'error_get_file_owner': '获取文件所有者失败: {error}',
+
+        'error_set_file_owner': '设置文件所有者失败: {error}',
+
+        'error_get_file_group': '获取文件组失败: {error}',
+
+        'error_set_file_group': '设置文件组失败: {error}',
+
+        'error_get_file_acl': '获取文件ACL失败: {error}',
+
+        'error_set_file_acl': '设置文件ACL失败: {error}',
+
+        'error_get_file_attr_ext': '获取文件扩展属性失败: {error}',
+
+        'error_set_file_attr_ext': '设置文件扩展属性失败: {error}',
+
+        'error_get_file_stream': '获取文件流失败: {error}',
+
+        'error_set_file_stream': '设置文件流失败: {error}',
+
+        'error_get_file_hardlink': '获取文件硬链接失败: {error}',
+
+        'error_set_file_hardlink': '设置文件硬链接失败: {error}',
+
+        'error_get_file_symlink': '获取文件符号链接失败: {error}',
+
+        'error_set_file_symlink': '设置文件符号链接失败: {error}',
+
+        'error_get_file_junction': '获取文件连接点失败: {error}',
+
+        'error_set_file_junction': '设置文件连接点失败: {error}',
+
+        'error_get_file_mount': '获取文件挂载点失败: {error}',
+
+        'error_set_file_mount': '设置文件挂载点失败: {error}',
+
+        'error_get_file_reparse': '获取文件重解析点失败: {error}',
+
+        'error_set_file_reparse': '设置文件重解析点失败: {error}',
+
+        'error_get_file_sparse': '获取文件稀疏属性失败: {error}',
+
+        'error_set_file_sparse': '设置文件稀疏属性失败: {error}',
+
+        'error_get_file_compressed': '获取文件压缩属性失败: {error}',
+
+        'error_set_file_compressed': '设置文件压缩属性失败: {error}',
+
+        'error_get_file_encrypted': '获取文件加密属性失败: {error}',
+
+        'error_set_file_encrypted': '设置文件加密属性失败: {error}',
+
+        'error_get_file_offline': '获取文件脱机属性失败: {error}',
+
+        'error_set_file_offline': '设置文件脱机属性失败: {error}',
+
+        'error_get_file_temporary': '获取文件临时属性失败: {error}',
+
+        'error_set_file_temporary': '设置文件临时属性失败: {error}',
+
+        'error_get_file_archive': '获取文件存档属性失败: {error}',
+
+        'error_set_file_archive': '设置文件存档属性失败: {error}',
+
+        'error_get_file_system': '获取文件系统属性失败: {error}',
+
+        'error_set_file_system': '设置文件系统属性失败: {error}',
+
+        'error_get_file_hidden': '获取文件隐藏属性失败: {error}',
+
+        'error_set_file_hidden': '设置文件隐藏属性失败: {error}',
+
+        'error_get_file_readonly': '获取文件只读属性失败: {error}',
+
+        'error_set_file_readonly': '设置文件只读属性失败: {error}',
+
+        'error_get_file_directory': '获取文件目录属性失败: {error}',
+
+        'error_set_file_directory': '设置文件目录属性失败: {error}',
+
+        'error_get_file_normal': '获取文件普通属性失败: {error}',
+
+        'error_set_file_normal': '设置文件普通属性失败: {error}',
+
+        'error_get_file_device': '获取文件设备属性失败: {error}',
+
+        'error_set_file_device': '设置文件设备属性失败: {error}',
+
+        'error_get_file_reserved': '获取文件保留属性失败: {error}',
+
+        'error_set_file_reserved': '设置文件保留属性失败: {error}',
+
+        'error_get_file_efile': '获取文件EFILE属性失败: {error}',
+
+        'error_set_file_efile': '设置文件EFILE属性失败: {error}',
+
+        'error_get_file_open': '获取文件打开属性失败: {error}',
+
+        'error_set_file_open': '设置文件打开属性失败: {error}',
+
+        'error_get_file_content_indexed': '获取文件内容索引属性失败: {error}',
+
+        'error_set_file_content_indexed': '设置文件内容索引属性失败: {error}',
+
+        'error_get_file_integrity_stream': '获取文件完整性流属性失败: {error}',
+
+        'error_set_file_integrity_stream': '设置文件完整性流属性失败: {error}',
+
+        'error_get_file_no_scrub_data': '获取文件无擦除数据属性失败: {error}',
+
+        'error_set_file_no_scrub_data': '设置文件无擦除数据属性失败: {error}',
+
+        'error_get_file_pinned': '获取文件固定属性失败: {error}',
+
+        'error_set_file_pinned': '设置文件固定属性失败: {error}',
+
+        'error_get_file_unpinned': '获取文件未固定属性失败: {error}',
+
+        'error_set_file_unpinned': '设置文件未固定属性失败: {error}',
+
+        'error_get_file_recall_on_open': '获取文件打开时召回属性失败: {error}',
+
+        'error_set_file_recall_on_open': '设置文件打开时召回属性失败: {error}',
+
+        'error_get_file_recall_on_data_access': '获取文件数据访问时召回属性失败: {error}',
+
+        'error_set_file_recall_on_data_access': '设置文件数据访问时召回属性失败: {error}',
+
+        'error_get_file_sticky': '获取文件粘性属性失败: {error}',
+
+        'error_set_file_sticky': '设置文件粘性属性失败: {error}',
+
+        'error_get_file_reparse_point': '获取文件重解析点属性失败: {error}',
+
+        'error_set_file_reparse_point': '设置文件重解析点属性失败: {error}',
+
+        'error_get_file_sparse_file': '获取文件稀疏文件属性失败: {error}',
+
+        'error_set_file_sparse_file': '设置文件稀疏文件属性失败: {error}',
+
+        'error_get_file_reparse_point': '获取文件重解析点属性失败: {error}',
+
+        'error_set_file_reparse_point': '设置文件重解析点属性失败: {error}',
+
+        'error_get_file_compressed': '获取文件压缩属性失败: {error}',
+
+        'error_set_file_compressed': '设置文件压缩属性失败: {error}',
+
+        'error_get_file_offline': '获取文件脱机属性失败: {error}',
+
+        'error_set_file_offline': '设置文件脱机属性失败: {error}',
+
+        'error_get_file_not_content_indexed': '获取文件非内容索引属性失败: {error}',
+
+        'error_set_file_not_content_indexed': '设置文件非内容索引属性失败: {error}',
+
+        'error_get_file_encrypted': '获取文件加密属性失败: {error}',
+
+        'error_set_file_encrypted': '设置文件加密属性失败: {error}',
+
+        'chinese': '中文',
+
+        'english': '英文'
 
     },
 
@@ -508,7 +718,7 @@ LANGUAGES = {
 
         'error_set_start_number': 'Error setting start number: {error}',
 
-        'skip_hidden': 'Skip hidden files/folders',
+        'skip_hidden': 'Skip hidden files/folders when backing up',
 
         'save_settings': 'Save and Apply Settings',
 
@@ -586,7 +796,213 @@ LANGUAGES = {
 
         'error_load_config': 'Error loading configuration file: {error}',
 
-        'error_save_config': 'Error saving configuration file: {error}'
+        'error_save_config': 'Error saving configuration file: {error}',
+
+        'error_no_backup_dir': 'Backup directory does not exist: {path}',
+
+        'error_create_backup_dir': 'Failed to create backup directory: {error}',
+
+        'error_copy_file': 'Failed to copy file: {error}',
+
+        'error_copy_dir': 'Failed to copy directory: {error}',
+
+        'error_read_file': 'Failed to read file: {error}',
+
+        'error_write_file': 'Failed to write file: {error}',
+
+        'error_create_dir': 'Failed to create directory: {error}',
+
+        'error_delete_file': 'Failed to delete file: {error}',
+
+        'error_delete_dir': 'Failed to delete directory: {error}',
+
+        'error_rename_file': 'Failed to rename file: {error}',
+
+        'error_rename_dir': 'Failed to rename directory: {error}',
+
+        'error_move_file': 'Failed to move file: {error}',
+
+        'error_move_dir': 'Failed to move directory: {error}',
+
+        'error_list_dir': 'Failed to list directory contents: {error}',
+
+        'error_get_file_info': 'Failed to get file information: {error}',
+
+        'error_set_file_info': 'Failed to set file information: {error}',
+
+        'error_get_file_attr': 'Failed to get file attributes: {error}',
+
+        'error_set_file_attr': 'Failed to set file attributes: {error}',
+
+        'error_get_file_time': 'Failed to get file time: {error}',
+
+        'error_set_file_time': 'Failed to set file time: {error}',
+
+        'error_get_file_size': 'Failed to get file size: {error}',
+
+        'error_get_file_perm': 'Failed to get file permissions: {error}',
+
+        'error_set_file_perm': 'Failed to set file permissions: {error}',
+
+        'error_get_file_owner': 'Failed to get file owner: {error}',
+
+        'error_set_file_owner': 'Failed to set file owner: {error}',
+
+        'error_get_file_group': 'Failed to get file group: {error}',
+
+        'error_set_file_group': 'Failed to set file group: {error}',
+
+        'error_get_file_acl': 'Failed to get file ACL: {error}',
+
+        'error_set_file_acl': 'Failed to set file ACL: {error}',
+
+        'error_get_file_attr_ext': 'Failed to get file extended attributes: {error}',
+
+        'error_set_file_attr_ext': 'Failed to set file extended attributes: {error}',
+
+        'error_get_file_stream': 'Failed to get file stream: {error}',
+
+        'error_set_file_stream': 'Failed to set file stream: {error}',
+
+        'error_get_file_hardlink': 'Failed to get file hard link: {error}',
+
+        'error_set_file_hardlink': 'Failed to set file hard link: {error}',
+
+        'error_get_file_symlink': 'Failed to get file symbolic link: {error}',
+
+        'error_set_file_symlink': 'Failed to set file symbolic link: {error}',
+
+        'error_get_file_junction': 'Failed to get file junction: {error}',
+
+        'error_set_file_junction': 'Failed to set file junction: {error}',
+
+        'error_get_file_mount': 'Failed to get file mount point: {error}',
+
+        'error_set_file_mount': 'Failed to set file mount point: {error}',
+
+        'error_get_file_reparse': 'Failed to get file reparse point: {error}',
+
+        'error_set_file_reparse': 'Failed to set file reparse point: {error}',
+
+        'error_get_file_sparse': 'Failed to get file sparse attribute: {error}',
+
+        'error_set_file_sparse': 'Failed to set file sparse attribute: {error}',
+
+        'error_get_file_compressed': 'Failed to get file compressed attribute: {error}',
+
+        'error_set_file_compressed': 'Failed to set file compressed attribute: {error}',
+
+        'error_get_file_encrypted': 'Failed to get file encrypted attribute: {error}',
+
+        'error_set_file_encrypted': 'Failed to set file encrypted attribute: {error}',
+
+        'error_get_file_offline': 'Failed to get file offline attribute: {error}',
+
+        'error_set_file_offline': 'Failed to set file offline attribute: {error}',
+
+        'error_get_file_temporary': 'Failed to get file temporary attribute: {error}',
+
+        'error_set_file_temporary': 'Failed to set file temporary attribute: {error}',
+
+        'error_get_file_archive': 'Failed to get file archive attribute: {error}',
+
+        'error_set_file_archive': 'Failed to set file archive attribute: {error}',
+
+        'error_get_file_system': 'Failed to get file system attribute: {error}',
+
+        'error_set_file_system': 'Failed to set file system attribute: {error}',
+
+        'error_get_file_hidden': 'Failed to get file hidden attribute: {error}',
+
+        'error_set_file_hidden': 'Failed to set file hidden attribute: {error}',
+
+        'error_get_file_readonly': 'Failed to get file read-only attribute: {error}',
+
+        'error_set_file_readonly': 'Failed to set file read-only attribute: {error}',
+
+        'error_get_file_directory': 'Failed to get file directory attribute: {error}',
+
+        'error_set_file_directory': 'Failed to set file directory attribute: {error}',
+
+        'error_get_file_normal': 'Failed to get file normal attribute: {error}',
+
+        'error_set_file_normal': 'Failed to set file normal attribute: {error}',
+
+        'error_get_file_device': 'Failed to get file device attribute: {error}',
+
+        'error_set_file_device': 'Failed to set file device attribute: {error}',
+
+        'error_get_file_reserved': 'Failed to get file reserved attribute: {error}',
+
+        'error_set_file_reserved': 'Failed to set file reserved attribute: {error}',
+
+        'error_get_file_efile': 'Failed to get file EFILE attribute: {error}',
+
+        'error_set_file_efile': 'Failed to set file EFILE attribute: {error}',
+
+        'error_get_file_open': 'Failed to get file open attribute: {error}',
+
+        'error_set_file_open': 'Failed to set file open attribute: {error}',
+
+        'error_get_file_content_indexed': 'Failed to get file content indexed attribute: {error}',
+
+        'error_set_file_content_indexed': 'Failed to set file content indexed attribute: {error}',
+
+        'error_get_file_integrity_stream': 'Failed to get file integrity stream attribute: {error}',
+
+        'error_set_file_integrity_stream': 'Failed to set file integrity stream attribute: {error}',
+
+        'error_get_file_no_scrub_data': 'Failed to get file no scrub data attribute: {error}',
+
+        'error_set_file_no_scrub_data': 'Failed to set file no scrub data attribute: {error}',
+
+        'error_get_file_pinned': 'Failed to get file pinned attribute: {error}',
+
+        'error_set_file_pinned': 'Failed to set file pinned attribute: {error}',
+
+        'error_get_file_unpinned': 'Failed to get file unpinned attribute: {error}',
+
+        'error_set_file_unpinned': 'Failed to set file unpinned attribute: {error}',
+
+        'error_get_file_recall_on_open': 'Failed to get file recall on open attribute: {error}',
+
+        'error_set_file_recall_on_open': 'Failed to set file recall on open attribute: {error}',
+
+        'error_get_file_recall_on_data_access': 'Failed to get file recall on data access attribute: {error}',
+
+        'error_set_file_recall_on_data_access': 'Failed to set file recall on data access attribute: {error}',
+
+        'error_get_file_sticky': 'Failed to get file sticky attribute: {error}',
+
+        'error_set_file_sticky': 'Failed to set file sticky attribute: {error}',
+
+        'error_get_file_reparse_point': 'Failed to get file reparse point attribute: {error}',
+
+        'error_set_file_reparse_point': 'Failed to set file reparse point attribute: {error}',
+
+        'error_get_file_sparse_file': 'Failed to get file sparse file attribute: {error}',
+
+        'error_set_file_sparse_file': 'Failed to set file sparse file attribute: {error}',
+
+        'error_get_file_compressed': 'Failed to get file compressed attribute: {error}',
+
+        'error_set_file_compressed': 'Failed to set file compressed attribute: {error}',
+
+        'error_get_file_offline': 'Failed to get file offline attribute: {error}',
+
+        'error_set_file_offline': 'Failed to set file offline attribute: {error}',
+
+        'error_get_file_not_content_indexed': 'Failed to get file not content indexed attribute: {error}',
+
+        'error_set_file_not_content_indexed': 'Failed to set file not content indexed attribute: {error}',
+
+        'error_get_file_encrypted': 'failed to get file encrypted attribute: {error}',
+
+        'error_set_file_encrypted': 'failed to set file encrypted attribute: {error}',
+
+        'chinese': 'chinese',
+
+        'english': 'english'
 
     }
 
@@ -904,6 +1320,7 @@ class AutoBackupTool:
 
         self.backup_list.heading("date", text=self.lang_strings['backup_time'])
         self.backup_list.heading("name", text=self.lang_strings['backup_name'])
+        self.backup_list.heading("keep", text=self.lang_strings['keep_backup'])
         self.btn_refresh.config(text=self.lang_strings['refresh_list'])
         self.btn_delete.config(text=self.lang_strings['delete_selected'])
         self.btn_restore.config(text=self.lang_strings['restore_selected'])
@@ -926,11 +1343,11 @@ class AutoBackupTool:
         
 
         if hasattr(self, 'number_mode_label'):
-            self.number_mode_label.config(text=self.lang_strings.get('number_mode', 'Number Mode:') if self.current_lang == 'en' else '序号模式：')
+            self.number_mode_label.config(text=self.lang_strings['number_mode'])
         if hasattr(self, 'auto_number_radio'):
-            self.auto_number_radio.config(text=self.lang_strings.get('auto_number', 'Auto') if self.current_lang == 'en' else '自动编号')
+            self.auto_number_radio.config(text=self.lang_strings['auto_number'])
         if hasattr(self, 'manual_number_radio'):
-            self.manual_number_radio.config(text=self.lang_strings.get('manual_number', 'Manual') if self.current_lang == 'en' else '手动编号')
+            self.manual_number_radio.config(text=self.lang_strings['manual_number'])
             
 
         self.btn_save_settings.config(text=self.lang_strings['save_settings'] if 'save_settings' in self.lang_strings else 'Save Settings')
@@ -948,8 +1365,8 @@ class AutoBackupTool:
             self.btn_import_settings.config(text=self.lang_strings['import_settings'])
         
 
-        self.btn_zh.config(text="中文")
-        self.btn_en.config(text="English")
+        self.btn_zh.config(text=self.lang_strings['chinese'])
+        self.btn_en.config(text=self.lang_strings['english'])
         self.update_lang_button_state()
         
 
@@ -1688,6 +2105,10 @@ class AutoBackupTool:
 
                 if config.has_option('Settings', 'autonumbermode'):
                     self.auto_number_mode = config.getboolean('Settings', 'autonumbermode')
+                else:
+                                
+
+                    self.auto_number_mode = True
                 
 
                 if config.has_option('Settings', 'skiphidden'):
@@ -1771,9 +2192,9 @@ class AutoBackupTool:
         lang_btn_frame.pack(side="right")
         
 
-        self.btn_zh = ttk.Button(lang_btn_frame, text="中文", command=lambda: self.set_language('zh'))
+        self.btn_zh = ttk.Button(lang_btn_frame, text=self.lang_strings['chinese'], command=lambda: self.set_language('zh'))
         self.btn_zh.pack(side="left", padx=2)
-        self.btn_en = ttk.Button(lang_btn_frame, text="English", command=lambda: self.set_language('en'))
+        self.btn_en = ttk.Button(lang_btn_frame, text=self.lang_strings['english'], command=lambda: self.set_language('en'))
         self.btn_en.pack(side="left", padx=2)
         
 
@@ -1810,7 +2231,7 @@ class AutoBackupTool:
         self.source_frame.rowconfigure(0, weight=1)
         
 
-        self.source_listbox = tk.Listbox(self.source_frame, width=50, height=8)             
+        self.source_listbox = tk.Listbox(self.source_frame, width=50, height=8, selectmode=tk.MULTIPLE)                  
         self.source_listbox.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
         
 
@@ -1972,11 +2393,6 @@ class AutoBackupTool:
         self.hotkey_label.pack(side="left", padx=5, pady=5)
         
 
-        base_font_size = int(FONT_CONFIG['base_size'] * FONT_CONFIG['scale_factor'])
-        entry_font_size = max(base_font_size, 16)            
-        entry_font = ('Microsoft YaHei', entry_font_size)
-        
-
         self.hotkey_entry = ttk.Entry(backup_hotkey_frame, width=15, font=entry_font)
         self.hotkey_entry.insert(0, self.hotkey)
         self.hotkey_entry.pack(side="left", padx=5, pady=5)
@@ -1994,11 +2410,6 @@ class AutoBackupTool:
 
         self.restore_hotkey_label = ttk.Label(restore_hotkey_frame, text=self.lang_strings['restore_hotkey'])
         self.restore_hotkey_label.pack(side="left", padx=5, pady=5)
-        
-
-        base_font_size = int(FONT_CONFIG['base_size'] * FONT_CONFIG['scale_factor'])
-        entry_font_size = max(base_font_size, 16)            
-        entry_font = ('Microsoft YaHei', entry_font_size)
         
 
         self.restore_hotkey_entry = ttk.Entry(restore_hotkey_frame, width=15, font=entry_font)
@@ -2096,8 +2507,7 @@ class AutoBackupTool:
 
         self.counter_var = tk.StringVar(value=str(self.backup_counter))
         self.backup_count_label = ttk.Label(counter_frame, text="")
-        self.backup_count_label.pack(side="left", padx=5)
-        
+                   
 
         def update_counter_display(*args):
             self.backup_count_label.config(text=self.lang_strings['backup_count'].format(count=self.counter_var.get()))
@@ -2106,39 +2516,29 @@ class AutoBackupTool:
         self.counter_var.trace_add('write', update_counter_display)
         
 
-        update_counter_display()
-        
-
-        ttk.Separator(counter_frame, orient='vertical').pack(side="left", fill="y", padx=10, pady=5)
-        
-
         self.number_mode_label = ttk.Label(counter_frame, text=self.lang_strings['number_mode'])
-        self.number_mode_label.pack(side="left", padx=5)
-        
+                  
 
         number_mode_radio_frame = ttk.Frame(counter_frame)
-        number_mode_radio_frame.pack(side="left", padx=5)
-        
+                    
 
+        self.auto_number_mode = True
         self.auto_number_mode_var = tk.BooleanVar(value=self.auto_number_mode)
         self.auto_number_radio = ttk.Radiobutton(number_mode_radio_frame, text=self.lang_strings['auto_number'], 
 
                                                 variable=self.auto_number_mode_var, value=True)
-        self.auto_number_radio.pack(side="left", padx=5)
-        
+                    
 
         self.manual_number_radio = ttk.Radiobutton(number_mode_radio_frame, text=self.lang_strings['manual_number'], 
 
                                                   variable=self.auto_number_mode_var, value=False)
-        self.manual_number_radio.pack(side="left", padx=5)
-        
+                    
 
         self.suffix_type_var.trace_add('write', self.update_number_mode_visibility)
         
 
         self.btn_set_start_number = ttk.Button(counter_frame, text=self.lang_strings['set_start_number'], command=self.set_start_number)
-        self.btn_set_start_number.pack(side="left", padx=5)
-        
+                    
 
         skip_hidden_frame = ttk.Frame(self.frame_backup_options)
         skip_hidden_frame.grid(row=9, column=0, columnspan=2, padx=5, pady=5, sticky="w")
@@ -2625,8 +3025,15 @@ class AutoBackupTool:
     def remove_source(self):
         selected = self.source_listbox.curselection()
         if selected:
-            index = selected[0]
-            self.source_paths.pop(index)
+                                        
+
+            selected_indices = sorted(selected, reverse=True)
+            
+
+            for index in selected_indices:
+                self.source_paths.pop(index)
+            
+
             self.update_source_list()
             self.save_config()
     
@@ -2637,13 +3044,14 @@ class AutoBackupTool:
             return
         
 
-        path = self.source_paths[selected[0]]
-        if os.path.exists(path):
-            if os.path.isfile(path):
-                directory = os.path.dirname(path)
-                os.startfile(directory)
-            else:
-                os.startfile(path)
+        for index in selected:
+            path = self.source_paths[index]
+            if os.path.exists(path):
+                if os.path.isfile(path):
+                    directory = os.path.dirname(path)
+                    os.startfile(directory)
+                else:
+                    os.startfile(path)
     
 
     def open_dest_location(self):
@@ -2879,13 +3287,18 @@ class AutoBackupTool:
             return False
     
 
-    def copy_with_attributes(self, src, dst):
-        
-
+    def copy_with_attributes(self, src, dst, is_source_item=False, is_restore=False):
         try:
-                                                  
+                            
 
-            if self.skip_hidden and self.is_hidden(src):
+            if is_restore:
+                filename = os.path.basename(src)
+                if filename in [".keep", ".file", ".source_path", ".folder"] or \
+                   (filename.startswith(".") and (filename.endswith("keep") or filename.endswith("file"))):
+                    return
+            
+
+            if self.skip_hidden and self.is_hidden(src) and not is_source_item and not is_restore:
                 logging.info(self.lang_strings['skipping_hidden_file'].format(path=src))
                 return
                 
@@ -2903,22 +3316,29 @@ class AutoBackupTool:
                 
 
             elif os.path.isdir(src):
-                               
+                                              
 
-                if not os.path.exists(dst):
-                    os.makedirs(dst)
+                if os.path.exists(dst):
+                                    
+
+                    self._remove_item_with_readonly_handling(dst)
+                
+
+                os.makedirs(dst, exist_ok=True)
+                
+
+                for item in os.listdir(src):
+                    src_item = os.path.join(src, item)
+                    dst_item = os.path.join(dst, item)
+                    
+
+                    self.copy_with_attributes(src_item, dst_item, is_source_item=False)
                 
 
                 src_attrs = win32file.GetFileAttributesW(src)
                 
 
                 win32file.SetFileAttributesW(dst, src_attrs)
-                
-
-                for item in os.listdir(src):
-                    src_item = os.path.join(src, item)
-                    dst_item = os.path.join(dst, item)
-                    self.copy_with_attributes(src_item, dst_item)
         except Exception as e:
             logging.error(self.lang_strings['error_copying_file_attributes'].format(error=e))
             raise
@@ -3102,10 +3522,7 @@ class AutoBackupTool:
 
                 if os.path.exists(backup_folder_path):
                     if self.duplicate_handling == "overwrite":
-                        if os.path.isdir(backup_folder_path):
-                            shutil.rmtree(backup_folder_path)
-                        else:
-                            os.remove(backup_folder_path)
+                        self._remove_item_with_readonly_handling(backup_folder_path)
                     elif self.duplicate_handling == "rename":
                                         
 
@@ -3131,7 +3548,7 @@ class AutoBackupTool:
                                            
 
                     dest_path = os.path.join(backup_folder_path, source_name)
-                    self.copy_with_attributes(source_path, dest_path)
+                    self.copy_with_attributes(source_path, dest_path, is_source_item=True)
                     
 
                     folder_marker_path = os.path.join(backup_folder_path, ".folder")
@@ -3142,7 +3559,7 @@ class AutoBackupTool:
                                        
 
                     dest_path = os.path.join(backup_folder_path, source_name)
-                    self.copy_with_attributes(source_path, dest_path)
+                    self.copy_with_attributes(source_path, dest_path, is_source_item=True)
                     
 
                     file_marker_path = os.path.join(backup_folder_path, ".file")
@@ -3197,6 +3614,77 @@ class AutoBackupTool:
             self.status_var.set(self.lang_strings['status_ready'])
     
 
+    def _remove_item_with_readonly_handling(self, item_path):
+        
+
+        try:
+            if os.path.isdir(item_path):
+                                   
+
+                for root, dirs, files in os.walk(item_path, topdown=False):
+                    for file in files:
+                        file_path = os.path.join(root, file)
+                                   
+
+                        try:
+                            attrs = win32file.GetFileAttributesW(file_path)
+                            if attrs & win32con.FILE_ATTRIBUTE_READONLY:
+                                win32file.SetFileAttributesW(file_path, attrs & ~win32con.FILE_ATTRIBUTE_READONLY)
+                        except:
+                            pass                   
+                        try:
+                            os.remove(file_path)
+                        except Exception as e:
+                            logging.warning(f"删除文件失败: {file_path}, 错误: {e}")
+                    
+
+                    for dir in dirs:
+                        dir_path = os.path.join(root, dir)
+                                   
+
+                        try:
+                            attrs = win32file.GetFileAttributesW(dir_path)
+                            if attrs & win32con.FILE_ATTRIBUTE_READONLY:
+                                win32file.SetFileAttributesW(dir_path, attrs & ~win32con.FILE_ATTRIBUTE_READONLY)
+                        except:
+                            pass                   
+                        try:
+                            os.rmdir(dir_path)
+                        except Exception as e:
+                            logging.warning(f"删除目录失败: {dir_path}, 错误: {e}")
+                
+
+                try:
+                    attrs = win32file.GetFileAttributesW(item_path)
+                    if attrs & win32con.FILE_ATTRIBUTE_READONLY:
+                        win32file.SetFileAttributesW(item_path, attrs & ~win32con.FILE_ATTRIBUTE_READONLY)
+                except:
+                    pass                   
+                
+
+                try:
+                    os.rmdir(item_path)
+                except Exception as e:
+                    logging.warning(f"删除根目录失败: {item_path}, 错误: {e}")
+            else:
+                      
+
+                try:
+                    attrs = win32file.GetFileAttributesW(item_path)
+                    if attrs & win32con.FILE_ATTRIBUTE_READONLY:
+                        win32file.SetFileAttributesW(item_path, attrs & ~win32con.FILE_ATTRIBUTE_READONLY)
+                except:
+                    pass                   
+                
+
+                try:
+                    os.remove(item_path)
+                except Exception as e:
+                    logging.warning(f"删除文件失败: {item_path}, 错误: {e}")
+        except Exception as e:
+            logging.error(f"删除项目失败: {item_path}, 错误: {e}")
+    
+
     def cleanup_old_backups(self):
         
 
@@ -3218,10 +3706,7 @@ class AutoBackupTool:
 
             if len(backup_items) > self.max_backups:
                 for _, item_path in backup_items[self.max_backups:]:
-                    if os.path.isdir(item_path):
-                        shutil.rmtree(item_path)
-                    else:
-                        os.remove(item_path)
+                    self._remove_item_with_readonly_handling(item_path)
         except Exception as e:
             logging.error(self.lang_strings['error_cleanup_old_backups'].format(error=e))
             raise
@@ -3230,24 +3715,12 @@ class AutoBackupTool:
     def update_number_mode_visibility(self, *args):
         
 
-        if self.suffix_type_var.get() == "number":
-                      
-
-            if hasattr(self, 'number_mode_label'):
-                self.number_mode_label.pack(side="left", padx=5)
-            if hasattr(self, 'auto_number_radio'):
-                self.auto_number_radio.pack(side="left", padx=5)
-            if hasattr(self, 'manual_number_radio'):
-                self.manual_number_radio.pack(side="left", padx=5)
-        else:
-                      
-
-            if hasattr(self, 'number_mode_label'):
-                self.number_mode_label.pack_forget()
-            if hasattr(self, 'auto_number_radio'):
-                self.auto_number_radio.pack_forget()
-            if hasattr(self, 'manual_number_radio'):
-                self.manual_number_radio.pack_forget()
+        if hasattr(self, 'number_mode_label'):
+            self.number_mode_label.pack_forget()
+        if hasattr(self, 'auto_number_radio'):
+            self.auto_number_radio.pack_forget()
+        if hasattr(self, 'manual_number_radio'):
+            self.manual_number_radio.pack_forget()
     
 
     def update_source_path_file(self):
@@ -3642,10 +4115,7 @@ class AutoBackupTool:
 
                         for _, item_path in normal_backups[:deletable_count]:
                             if os.path.exists(item_path):
-                                if os.path.isdir(item_path):
-                                    shutil.rmtree(item_path)
-                                else:
-                                    os.remove(item_path)
+                                self._remove_item_with_readonly_handling(item_path)
                                 logging.info(f"已删除旧备份: {os.path.basename(item_path)}")
                         
 
@@ -3731,18 +4201,72 @@ class AutoBackupTool:
                     timestamp = datetime.datetime.fromtimestamp(ctime).strftime("%Y-%m-%d %H:%M:%S")
                     
 
-                    backup_items.append((-ctime, timestamp, item_path, item))                      
+                    keep_file_path = os.path.join(item_path, ".keep")
+                    keep_status = 1 if os.path.exists(keep_file_path) else 0
+                    
+
+                    if keep_status == 0:
+                        for subitem in os.listdir(item_path):
+                            if subitem.startswith(".keep_"):
+                                keep_status = 1
+                                break
+                    
+
+                    backup_items.append((ctime, timestamp, item_path, item, keep_status))          
             
 
-            backup_items.sort(key=lambda x: x[0])
+            if hasattr(self, 'sort_type'):
+                if self.sort_type == "name":
+                           
+
+                    if hasattr(self, 'name_sort_order') and self.name_sort_order == "asc":
+                                   
+
+                        backup_items.sort(key=lambda x: x[3].lower())
+                    else:
+                                     
+
+                        backup_items.sort(key=lambda x: x[3].lower(), reverse=True)
+                elif self.sort_type == "keep":
+                             
+
+                    if hasattr(self, 'keep_sort_order') and self.keep_sort_order == "asc":
+                                     
+
+                        backup_items.sort(key=lambda x: x[4])
+                    else:
+                                       
+
+                        backup_items.sort(key=lambda x: x[4], reverse=True)
+                else:           
+                           
+
+                    if hasattr(self, 'sort_order') and self.sort_order == "asc":
+                                     
+
+                        backup_items.sort(key=lambda x: x[0])
+                    else:
+                                       
+
+                        backup_items.sort(key=lambda x: x[0], reverse=True)
+            else:
+                         
+
+                if hasattr(self, 'sort_order') and self.sort_order == "asc":
+                                 
+
+                    backup_items.sort(key=lambda x: x[0])
+                else:
+                                   
+
+                    backup_items.sort(key=lambda x: x[0], reverse=True)
             
 
-            for _, timestamp, path, folder_name in backup_items:
+            for _, timestamp, path, folder_name, keep_status in backup_items:
                               
 
-                keep_file_path = os.path.join(path, ".keep")
-                keep_status = "✓" if os.path.exists(keep_file_path) else ""
-                self.backup_list.insert("", "end", values=(folder_name, timestamp, keep_status))
+                keep_display = "✓" if keep_status == 1 else ""
+                self.backup_list.insert("", "end", values=(folder_name, timestamp, keep_display))
         except Exception as e:
             logging.error(self.lang_strings['error_update_backup_list'].format(error=e))
     
@@ -3781,10 +4305,7 @@ class AutoBackupTool:
                     
 
                     if os.path.exists(backup_path):
-                        if os.path.isdir(backup_path):
-                            shutil.rmtree(backup_path)
-                        else:
-                            os.remove(backup_path)
+                        self._remove_item_with_readonly_handling(backup_path)
                         logging.info(f"已删除备份: {os.path.basename(backup_path)}")
                         self.status_var.set(self.lang_strings['deleted_backup'].format(name=os.path.basename(backup_path)))
             
@@ -3907,12 +4428,8 @@ class AutoBackupTool:
                 return
             
 
-            if os.path.exists(restore_path):
-                if os.path.isdir(restore_path):
-                    shutil.rmtree(restore_path)
-                else:
-                    os.remove(restore_path)
-            
+            keep_file_path = os.path.join(backup_path, ".keep")
+                                
 
             if os.path.isdir(backup_path):
                                     
@@ -3935,20 +4452,32 @@ class AutoBackupTool:
                                       
 
                             os.makedirs(os.path.dirname(restore_path), exist_ok=True)
-                            self.copy_with_attributes(source_item, restore_path)
+                                            
+
+                            if os.path.exists(restore_path):
+                                self._remove_item_with_readonly_handling(restore_path)
+                            self.copy_with_attributes(source_item, restore_path, is_restore=True)
                         else:
-                                                 
+                                                                     
 
                             target_dir = os.path.dirname(restore_path)
                             os.makedirs(target_dir, exist_ok=True)
                             for item in backup_items:
+                                                                 
+
+                                if item.startswith(".") and (item.endswith("keep") or item.endswith("file") or item in [".keep", ".file", ".source_path"]):
+                                    continue
                                 source_item = os.path.join(backup_path, item)
                                 dest_item = os.path.join(target_dir, item)
-                                self.copy_with_attributes(source_item, dest_item)
+                                                
+
+                                if os.path.exists(dest_item):
+                                    self._remove_item_with_readonly_handling(dest_item)
+                                self.copy_with_attributes(source_item, dest_item, is_restore=True)
                 elif os.path.exists(folder_marker_path):
                                                    
 
-                    backup_items = [item for item in os.listdir(backup_path) if item not in [".file", ".folder"]]
+                    backup_items = [item for item in os.listdir(backup_path) if item not in [".file", ".folder", ".source_path"]]
                     
 
                     if backup_items:
@@ -3959,30 +4488,49 @@ class AutoBackupTool:
                         
 
                         if os.path.exists(restore_path):
-                            if os.path.isdir(restore_path):
-                                shutil.rmtree(restore_path)
-                            else:
-                                os.remove(restore_path)
+                            self._remove_item_with_readonly_handling(restore_path)
                         
 
-                        if len(backup_items) == 1:
-                            source_folder = backup_items[0]
+                        actual_folders = [item for item in backup_items if not (item.startswith(".") and (item.endswith("keep") or item.endswith("file") or item in [".keep", ".file", ".source_path"]))]
+                        
+
+                        if actual_folders:
+                                             
+
+                            source_folder = actual_folders[0]
                             source_folder_path = os.path.join(backup_path, source_folder)
                             
 
-                            os.rename(source_folder_path, restore_path)
+                            if os.path.exists(restore_path):
+                                self._remove_item_with_readonly_handling(restore_path)
+                            os.makedirs(restore_path, exist_ok=True)
                             
 
-                            try:
-                                os.rmdir(backup_path)
-                            except:
-                                                        
+                            items_to_copy = []
+                            for item in os.listdir(source_folder_path):
+                                                                 
 
-                                pass
+                                if item.startswith(".") and (item.endswith("keep") or item.endswith("file") or item in [".keep", ".file", ".source_path"]):
+                                    continue
+                                source_item = os.path.join(source_folder_path, item)
+                                dest_item = os.path.join(restore_path, item)
+                                items_to_copy.append((source_item, dest_item))
+                            
+
+                            for source_item, dest_item in items_to_copy:
+                                try:
+                                    self.copy_with_attributes(source_item, dest_item, is_source_item=False, is_restore=True)
+                                except Exception as e:
+                                    logging.error(f"复制失败: {source_item} -> {dest_item}, 错误: {e}")
+                                    raise
+                            
+
+                        else:
+                            logging.warning(f"未找到实际文件夹用于还原，备份项: {backup_items}")
                 else:
                                        
 
-                    backup_items = [item for item in os.listdir(backup_path) if item not in [".file", ".folder"]]
+                    backup_items = [item for item in os.listdir(backup_path) if item not in [".file", ".folder", ".source_path"]]
                     
 
                     if backup_items:
@@ -3993,31 +4541,52 @@ class AutoBackupTool:
                         
 
                         if os.path.exists(restore_path):
-                            if os.path.isdir(restore_path):
-                                shutil.rmtree(restore_path)
-                            else:
-                                os.remove(restore_path)
+                            self._remove_item_with_readonly_handling(restore_path)
                         
 
-                        if len(backup_items) == 1:
-                            source_folder = backup_items[0]
+                        actual_folders = [item for item in backup_items if not (item.startswith(".") and (item.endswith("keep") or item.endswith("file") or item in [".keep", ".file", ".source_path"]))]
+                        
+
+                        if actual_folders:
+                                             
+
+                            source_folder = actual_folders[0]
                             source_folder_path = os.path.join(backup_path, source_folder)
                             
 
-                            os.rename(source_folder_path, restore_path)
+                            if os.path.exists(restore_path):
+                                self._remove_item_with_readonly_handling(restore_path)
+                            os.makedirs(restore_path, exist_ok=True)
                             
 
-                            try:
-                                os.rmdir(backup_path)
-                            except:
-                                                        
+                            items_to_copy = []
+                            for item in os.listdir(source_folder_path):
+                                                                 
 
-                                pass
+                                if item.startswith(".") and (item.endswith("keep") or item.endswith("file") or item in [".keep", ".file", ".source_path"]):
+                                    continue
+                                source_item = os.path.join(source_folder_path, item)
+                                dest_item = os.path.join(restore_path, item)
+                                items_to_copy.append((source_item, dest_item))
+                            
+
+                            for source_item, dest_item in items_to_copy:
+                                try:
+                                    self.copy_with_attributes(source_item, dest_item, is_source_item=False, is_restore=True)
+                                except Exception as e:
+                                    logging.error(f"复制失败: {source_item} -> {dest_item}, 错误: {e}")
+                                    raise
+                            
+
+                        else:
+                            logging.warning(f"无标记文件情况下未找到实际文件夹用于还原，备份项: {backup_items}")
+                
+
             else:
                                  
 
-                self.copy_with_attributes(backup_path, restore_path)
-            
+                self.copy_with_attributes(backup_path, restore_path, is_restore=True)
+                
 
             self.status_var.set(self.lang_strings['restored_backup'].format(name=original_name))
                                    
@@ -4113,7 +4682,7 @@ class AutoBackupTool:
         
 
         ok_button = ttk.Button(button_frame, text=self.lang_strings['ok_button'], command=on_ok)
-        ok_button.pack(side="right", padx=5)
+        ok_button.pack(side="left", padx=5)
         
 
         def on_cancel():
@@ -4121,7 +4690,7 @@ class AutoBackupTool:
         
 
         cancel_button = ttk.Button(button_frame, text=self.lang_strings['cancel_button'], command=on_cancel)
-        cancel_button.pack(side="right", padx=5)
+        cancel_button.pack(side="left", padx=5)
         
 
         entry.bind('<Return>', lambda event: on_ok())
@@ -4144,10 +4713,7 @@ class AutoBackupTool:
                     return
                 
 
-                if os.path.isdir(new_path):
-                    shutil.rmtree(new_path)
-                else:
-                    os.remove(new_path)
+                self._remove_item_with_readonly_handling(new_path)
             
 
             os.rename(backup_path, new_path)
@@ -4159,7 +4725,7 @@ class AutoBackupTool:
                     with open(keep_file_path, 'w') as f:
                         f.write("")
                     logging.info(f"已为重命名的备份创建保留标记: {new_name}")
-            
+                
 
             self.update_source_path_file()
             
@@ -4176,6 +4742,64 @@ class AutoBackupTool:
 
         item_id = self.backup_list.identify_row(event.y)
         column = self.backup_list.identify_column(event.x)
+        region = self.backup_list.identify_region(event.x, event.y)
+        
+
+        if region == "heading":
+                                         
+
+            if column == "#2":
+                             
+
+                if not hasattr(self, 'sort_order'):
+                    self.sort_order = "desc"               
+                else:
+                            
+
+                    self.sort_order = "asc" if self.sort_order == "desc" else "desc"
+                
+
+                self.sort_type = "time"
+                
+
+                self.update_backup_list()
+                return
+            
+
+            if column == "#1":
+                             
+
+                if not hasattr(self, 'name_sort_order'):
+                    self.name_sort_order = "asc"             
+                else:
+                            
+
+                    self.name_sort_order = "desc" if self.name_sort_order == "asc" else "asc"
+                
+
+                self.sort_type = "name"
+                
+
+                self.update_backup_list()
+                return
+            
+
+            if column == "#3":
+                             
+
+                if not hasattr(self, 'keep_sort_order'):
+                    self.keep_sort_order = "asc"               
+                else:
+                            
+
+                    self.keep_sort_order = "desc" if self.keep_sort_order == "asc" else "asc"
+                
+
+                self.sort_type = "keep"
+                
+
+                self.update_backup_list()
+                return
         
 
         if not item_id:
@@ -4488,6 +5112,8 @@ class AutoBackupTool:
                 
 
                 if new_backup_name != item_name:
+                                               
+
                     new_path = os.path.join(self.dest_dir, new_backup_name)
                     
 
