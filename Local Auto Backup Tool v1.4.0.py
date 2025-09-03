@@ -1897,6 +1897,9 @@ class AutoBackupTool:
         
 
         self.backup_list.bind("<ButtonRelease-1>", self.on_backup_list_click)
+                
+
+        self.backup_list.bind("<Double-Button-1>", self.on_backup_list_double_click)
         
 
         self.backup_list.pack(side="left", fill="both", expand=True)
@@ -3632,9 +3635,12 @@ class AutoBackupTool:
                     
 
                     if deletable_count > 0 and len(normal_backups) > deletable_count:
-                                               
+                                          
 
-                        for _, item_path in normal_backups[deletable_count:]:
+                        normal_backups.sort(key=lambda x: x[0])
+                        
+
+                        for _, item_path in normal_backups[:deletable_count]:
                             if os.path.exists(item_path):
                                 if os.path.isdir(item_path):
                                     shutil.rmtree(item_path)
@@ -3643,7 +3649,7 @@ class AutoBackupTool:
                                 logging.info(f"已删除旧备份: {os.path.basename(item_path)}")
                         
 
-                        normal_backups = normal_backups[:deletable_count]
+                        normal_backups = normal_backups[deletable_count:]
                 
 
                 remaining_backups = kept_backups + normal_backups
@@ -4023,28 +4029,31 @@ class AutoBackupTool:
             messagebox.showerror("Error", self.lang_strings['error_restore'].format(error=str(e)))
     
 
-    def rename_selected_backup(self):
+    def rename_selected_backup(self, backup_name=None):
         
 
-        selected = self.backup_list.selection()
-        if not selected:
-            messagebox.showinfo("Info", self.lang_strings['select_backup'])
-            return
+        if backup_name is None:
+            selected = self.backup_list.selection()
+            if not selected:
+                messagebox.showinfo("Info", self.lang_strings['select_backup'])
+                return
+            
+
+            if len(selected) > 1:
+                messagebox.showinfo("Info", self.lang_strings['select_one_backup'])
+                return
+            
+
+            item = selected[0]
+            values = self.backup_list.item(item, "values")
+            if not values or len(values) < 2:
+                messagebox.showerror("Error", self.lang_strings['error_backup_content'])
+                return
+            
+
+            backup_name = values[0]
         
 
-        if len(selected) > 1:
-            messagebox.showinfo("Info", self.lang_strings['select_one_backup'])
-            return
-        
-
-        item = selected[0]
-        values = self.backup_list.item(item, "values")
-        if not values or len(values) < 2:
-            messagebox.showerror("Error", self.lang_strings['error_backup_content'])
-            return
-        
-
-        backup_name = values[0]
         backup_path = os.path.join(self.dest_dir, backup_name)
         
 
@@ -4211,6 +4220,39 @@ class AutoBackupTool:
                 self.backup_list.item(item_id, values=(values[0], values[1], new_keep_status))
             except Exception as e:
                 logging.error(f"切换备份保留状态时出错: {e}")
+    
+
+    def on_backup_list_double_click(self, event):
+        
+
+        item_id = self.backup_list.identify_row(event.y)
+        column = self.backup_list.identify_column(event.x)
+        
+
+        if not item_id:
+            return
+        
+
+        if column == "#1":
+            try:
+                        
+
+                values = self.backup_list.item(item_id, "values")
+                if not values or len(values) < 1:
+                    return
+                
+
+                backup_name = values[0]
+                backup_path = os.path.join(self.dest_dir, backup_name)
+                
+
+                if not os.path.exists(backup_path):
+                    return
+                
+
+                self.rename_selected_backup(backup_name)
+            except Exception as e:
+                logging.error(f"双击备份名称时出错: {e}")
     
 
     def save_advanced_settings(self):
