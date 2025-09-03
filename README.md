@@ -35,6 +35,11 @@
 5. 在"备份管理"标签页中可以查看、删除、还原或重命名已有备份
 
 ## 更新日志
+### 版本 1.4.0
+
+#### 新增功能
+- 新增永久保留选项
+
 
 ### 版本 1.3.0
 
@@ -131,6 +136,11 @@ Local Auto Backup Tool is a powerful local automatic backup tool designed to hel
 5. In the "Backup Management" tab, you can view, delete, restore, or rename existing backups
 
 ## Change Log
+
+### Version 1.4.0
+
+#### New Features
+- Added permanent retention option
 
 ### Version 1.3.0
 
