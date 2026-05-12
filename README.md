@@ -35,6 +35,14 @@
 4. 点击"开始备份"按钮启动自动备份，或使用快捷键进行手动备份
 5. 在"备份管理"标签页中可以查看、删除、还原或重命名已有备份
 
+### 现代化多配置管理面板（新增）
+
+- 运行 `python modern_backup_manager.py` 启动新版管理面板
+- 支持多配置卡片管理：图标、名称、备份占用空间、自动备份开关、启动关联应用
+- 支持每个配置独立设置：源路径、备份目录、关联应用、间隔分钟、最大备份数、后缀策略、隐藏文件跳过
+- 支持手动备份与定时备份，并可在全局设置中启用快捷键备份/还原
+- 支持备份管理：刷新、删除、还原、打开位置、重命名
+
 ## 更新日志
 
 ### 版本 1.5.0
@@ -229,4 +237,3 @@ Local Auto Backup Tool is a powerful local automatic backup tool designed to hel
 - Fixed the issue of untimely backup list refresh
 - Fixed the issue of abnormal interface display under high DPI settings
 - Fixed the issue of path handling during the backup restoration process
-
