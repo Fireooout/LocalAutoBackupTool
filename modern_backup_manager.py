@@ -227,6 +227,8 @@ class ProfileWindow:
         self.window.geometry("980x680")
         self.window.protocol("WM_DELETE_WINDOW", self.on_close)
         self.profile = self.manager.get_profile(profile_id)
+        if not self.profile:
+            raise RuntimeError("配置不存在")
         self.create_widgets()
         self.refresh_from_profile()
         self.refresh_backup_list()
@@ -291,7 +293,7 @@ class ProfileWindow:
         ttk.Label(opts, text="最大备份数").grid(row=0, column=2, padx=4, pady=5, sticky="e")
         self.max_var = tk.StringVar()
         ttk.Entry(opts, width=12, textvariable=self.max_var).grid(row=0, column=3, padx=4, pady=5, sticky="w")
-        self.skip_hidden_var = tk.BooleanVar(value=self.profile.skip_hidden if self.profile else False)
+        self.skip_hidden_var = tk.BooleanVar(value=self.profile.skip_hidden)
         ttk.Checkbutton(opts, text="跳过隐藏文件/文件夹", variable=self.skip_hidden_var).grid(row=0, column=4, padx=4, pady=5, sticky="w")
 
         ttk.Label(opts, text="后缀类型").grid(row=1, column=0, padx=4, pady=5, sticky="e")
@@ -721,8 +723,8 @@ class ModernBackupManagerApp:
         m_settings = tk.Menu(menu, tearoff=0)
         m_settings.add_command(label="全局设置", command=self.open_global_settings)
         m_settings.add_separator()
-        m_settings.add_command(label="导出设置", command=lambda: GlobalSettingsWindow(self).export_settings())
-        m_settings.add_command(label="导入设置", command=lambda: GlobalSettingsWindow(self).import_settings())
+        m_settings.add_command(label="导出设置", command=self.export_settings)
+        m_settings.add_command(label="导入设置", command=self.import_settings)
         m_settings.add_separator()
         m_settings.add_command(label="退出", command=self.on_close)
         menu.add_cascade(label="设置", menu=m_settings)
@@ -743,6 +745,41 @@ class ModernBackupManagerApp:
     def save_all(self):
         self.data["profiles"] = [asdict(p) for p in self.profiles]
         self.store.save(self.data)
+
+    def export_settings(self):
+        path = filedialog.asksaveasfilename(
+            title="导出设置",
+            defaultextension=".json",
+            filetypes=[("JSON", "*.json"), ("All Files", "*.*")],
+            initialfile="profiles_config_export.json",
+        )
+        if not path:
+            return
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(self.data, f, ensure_ascii=False, indent=2)
+        messagebox.showinfo("提示", f"已导出设置: {path}")
+
+    def import_settings(self):
+        path = filedialog.askopenfilename(
+            title="导入设置",
+            filetypes=[("JSON", "*.json"), ("All Files", "*.*")],
+        )
+        if not path:
+            return
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if "profiles" not in data or "global" not in data:
+            messagebox.showerror("错误", "配置格式无效")
+            return
+        for pid in list(self.runners.keys()):
+            self.stop_profile(pid, save=False)
+        self.data = data
+        self.profiles = [Profile(**p) for p in data["profiles"]]
+        self.selected_profile_id = self.profiles[0].id if self.profiles else None
+        self.save_all()
+        self.refresh_dashboard()
+        self.apply_hotkeys()
+        messagebox.showinfo("提示", "导入成功")
 
     def set_profile_status(self, profile_id: str, message: str):
         self.status[profile_id] = message
@@ -800,8 +837,9 @@ class ModernBackupManagerApp:
         root = self.profile_backup_root(profile)
         if not root.exists():
             return
+        max_backups = max(1, int(profile.max_backups or 1))
         folders = sorted([x for x in root.iterdir() if x.is_dir()], key=lambda p: p.stat().st_mtime, reverse=True)
-        for old in folders[profile.max_backups:]:
+        for old in folders[max_backups:]:
             remove_path(old)
 
     def perform_backup(self, profile: Profile):
@@ -1005,7 +1043,7 @@ class ModernBackupManagerApp:
 
             top = tk.Frame(card, bg=card.cget("bg"))
             top.pack(fill="x", padx=8, pady=6)
-            enabled_var = tk.BooleanVar(value=profile.id in self.runners or profile.enabled)
+            enabled_var = tk.BooleanVar(value=profile.id in self.runners)
 
             def on_toggle(pid=profile.id, var=enabled_var):
                 self.selected_profile_id = pid
