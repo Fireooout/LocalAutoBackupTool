@@ -33,7 +33,7 @@ WINDOW_ICON_PATH = RESOURCES_DIR / "folder-sync.ico"
 
 
 def format_size(num_bytes: int) -> str:
-    size = float(max(0, num_bytes))
+    size = max(0, num_bytes)
     units = ["B", "KB", "MB", "GB", "TB"]
     for unit in units:
         if size < 1024 or unit == units[-1]:
@@ -802,7 +802,7 @@ class ModernBackupManagerApp:
         if not root.exists():
             return
         folders = sorted([x for x in root.iterdir() if x.is_dir()], key=lambda p: p.stat().st_mtime, reverse=True)
-        for old in folders[profile.max_backups :]:
+        for old in folders[profile.max_backups:]:
             remove_path(old)
 
     def perform_backup(self, profile: Profile):
@@ -835,7 +835,7 @@ class ModernBackupManagerApp:
                 continue
             if profile.skip_hidden and is_hidden(src):
                 continue
-            item_name = f"{i:03d}_{safe_name(src.name)}"
+            item_name = f"{i}_{safe_name(src.name)}"
             item_path = items_dir / item_name
             if src.is_file():
                 copy_file(src, item_path)
@@ -925,7 +925,7 @@ class ModernBackupManagerApp:
         p = self.get_profile(profile_id)
         if not p:
             return
-        if not messagebox.askyesno("确认", f"确定删除配置“{p.name}”？"):
+        if not messagebox.askyesno("确认", f"确定删除配置 \"{p.name}\" ?"):
             return
         self.stop_profile(profile_id, save=False)
         self.profiles = [x for x in self.profiles if x.id != profile_id]
@@ -1096,12 +1096,14 @@ class ModernBackupManagerApp:
     def hotkey_backup_action(self):
         pid = self.selected_profile_id
         if not pid:
+            self.root.after(0, lambda: self.status_var.set("未选中配置，无法执行快捷键备份"))
             return
         self.root.after(0, lambda: self.manual_backup_from_dashboard(pid))
 
     def hotkey_restore_action(self):
         pid = self.selected_profile_id
         if not pid:
+            self.root.after(0, lambda: self.status_var.set("未选中配置，无法执行快捷键还原"))
             return
         p = self.get_profile(pid)
         if not p:
