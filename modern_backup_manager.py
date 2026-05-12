@@ -39,7 +39,6 @@ def format_size(num_bytes: int) -> str:
         if size < 1024 or unit == units[-1]:
             return f"{size:.2f} {unit}"
         size /= 1024
-    return f"{size:.2f} TB"
 
 
 def open_path(path: Path) -> None:
@@ -292,7 +291,7 @@ class ProfileWindow:
         ttk.Label(opts, text="最大备份数").grid(row=0, column=2, padx=4, pady=5, sticky="e")
         self.max_var = tk.StringVar()
         ttk.Entry(opts, width=12, textvariable=self.max_var).grid(row=0, column=3, padx=4, pady=5, sticky="w")
-        self.skip_hidden_var = tk.BooleanVar(value=False)
+        self.skip_hidden_var = tk.BooleanVar(value=self.profile.skip_hidden if self.profile else False)
         ttk.Checkbutton(opts, text="跳过隐藏文件/文件夹", variable=self.skip_hidden_var).grid(row=0, column=4, padx=4, pady=5, sticky="w")
 
         ttk.Label(opts, text="后缀类型").grid(row=1, column=0, padx=4, pady=5, sticky="e")
@@ -989,7 +988,9 @@ class ModernBackupManagerApp:
         if not self.profiles:
             ttk.Label(self.cards_frame, text="暂无配置，请点击“新建配置”").pack(pady=30)
             return
-        columns = 3
+        card_width = 360
+        available_width = max(720, self.canvas.winfo_width() or self.root.winfo_width())
+        columns = max(1, min(4, available_width // card_width))
         for idx, profile in enumerate(self.profiles):
             row = idx // columns
             col = idx % columns
